@@ -15,13 +15,28 @@ import numpy as np
 import pandas as pd
 
 
-def parse_args():
+class Args(argparse.Namespace):
+    user_count: int
+    max_accounts_per_user: int
+    
+
+def parse_args() -> Args:
+    """
+    Parse arguments from command line invocation.
+
+    Returns
+    -------
+    Args
+        argparse.Namespace with user-defined or Default arguments.
+
+    """
+    
     parser = argparse.ArgumentParser(description = "Parse command line arguments for mock data generation")
     
     parser.add_argument("-u", "--user_count", type=int, default=10, help="Number of Users to create.")
     parser.add_argument("-a", "--max_accounts_per_user", type=int, default=3, help="Maximum number of accounts a User can have.")
     
-    return parser.parse_args()
+    return parser.parse_args(namespace=Args())
 
 
 def generate_users(user_count: int) -> pd.DataFrame:

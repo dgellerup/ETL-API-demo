@@ -1,12 +1,13 @@
 import pandas as pd
+from pathlib import Path
 from datetime import datetime
 
+from create_tables import main as create_tables
 from db import SessionLocal, engine
 from models import Base, User, Account
 
 
-def init_db():
-    Base.metadata.create_all(bind=engine)
+BASE_DIR = Path(__file__).resolve().parent
 
 
 def load_users(csv_path: str, session):
@@ -44,13 +45,13 @@ def load_accounts(csv_path: str, session):
     session.bulk_save_objects(accounts)
 
 
-def main():
-    init_db()
+def main(users_csv: str | Path = BASE_DIR / "users.csv", accounts_csv: str | Path = BASE_DIR / "accounts.csv"):
+    create_tables()
 
     session = SessionLocal()
     try:
-        load_users("users.csv", session)
-        load_accounts("accounts.csv", session)
+        load_users(users_csv, session)
+        load_accounts(accounts_csv, session)
 
         session.commit()
         print("Data loaded into DB successfully.")
