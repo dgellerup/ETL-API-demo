@@ -36,7 +36,7 @@ Once mock data is generated, use Docker to spin up a Docker Compose deployment w
 Now the database and API should be up and running, with our generated mock data loaded into the database.  
 
 ## Usage
-To test the database and API out, open a web browser and go to: `http://127.0.0.1:8000/docs`. This opens the FastAPI Swagger UI. The three API endpoints are listed under `default`:  
+To test the database and API out, open a web browser and go to: `http://localhost:8000/docs`. This opens the FastAPI Swagger UI. The three API endpoints are listed under `default`:  
 - `GET` /users
     - Try it out -> Click to expand, then click Execute to see the Response. Note `Jim Jacobs` is listed second with `id: 2`
 - `GET` /users/{user_id}

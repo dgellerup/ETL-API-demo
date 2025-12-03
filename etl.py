@@ -3,8 +3,8 @@ from pathlib import Path
 from datetime import datetime
 
 from create_tables import main as create_tables
-from db import SessionLocal, engine
-from models import Base, User, Account
+from db import SessionLocal
+from models import User, Account
 from sqlalchemy import text
 
 
