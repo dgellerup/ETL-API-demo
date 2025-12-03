@@ -30,9 +30,11 @@ This script will generate `users.csv` and `accounts.csv` with 10 Users and betwe
 
 ### Deployment
 Once mock data is generated, use Docker to spin up a Docker Compose deployment with `db` and `api` services.
-- Ensure Docker Desktop is running
+- Ensure [Docker Desktop](https://www.docker.com/products/docker-desktop/) is running
 - `docker compose up --build`  
+
 Now the database and API should be up and running, with our generated mock data loaded into the database.  
+
 ## Usage
 To test the database and API out, open a web browser and go to: `http://127.0.0.1:8000/docs`. This opens the FastAPI Swagger UI. The three API endpoints are listed under `default`:  
 - `GET` /users

@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.swp
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Misc
+*.log
+*.sqlite
+*.db
