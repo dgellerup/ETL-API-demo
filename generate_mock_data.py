@@ -96,10 +96,10 @@ def generate_accounts(users_df: pd.DataFrame, max_accounts_per_user: int) -> pd.
         Pandas DataFrame with mock account data
 
     """
-    users = users_df['name']
-    
+        
     new_accounts = []
-    for user in users:
+    for _, row in users_df.iterrows():
+        user = row['name']
         number_accounts = np.random.choice(3) + 1
         for i in range(number_accounts):
             account = create_account(user)
