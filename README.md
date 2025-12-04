@@ -38,8 +38,8 @@ Now the database and API should be up and running, with our generated mock data 
 ## Usage
 To test the database and API out, open a web browser and go to: `http://localhost:8000/docs`. This opens the FastAPI Swagger UI. The three API endpoints are listed under `default`:  
 - `GET` /users
-    - Click to expand -> `Try it out`, then click Execute to see the Response. Note `Jim Jacobs` is listed second with `id: 2`
+    - Click to expand -> `Try it out`, then click Execute to see the Response. Note who is listed second with `id: 2`
 - `GET` /users/{user_id}
-    - Click to expand -> `Try it out`, enter a number for the `user_id` parameter (let's use `2`), and click Execute. The Response provides details about `Jim Jacobs`.
+    - Click to expand -> `Try it out`, enter a number for the `user_id` parameter (let's use `2`), and click Execute. The Response provides details about the individual with `id: 2` that we noted above.
 - `GET` /accounts
     - Click to expand -> `Try it out`, enter a date within the last 5 years (let's use 2024-12-03), a minimum balance (say, 5000), and status Open, then click Execute. The Response shows Accounts opened in the past 5 years with at least $5000.
