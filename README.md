@@ -5,8 +5,9 @@
     - `cd ~/Projects`
     - `git clone https://github.com/dgellerup/ETL-API-demo.git`
 - Create an Anaconda/Miniconda Environment with Python 3.12
-    - `conda create -n test-env python-3.12`
+    - `conda create -n test-env python=3.12`
     - `conda activate test-env`
+#### Optional
 - Install `virtualenv`
     - `conda install virtualenv`
 - Create a virtualenv environment using your Conda environment's Python 3.12
@@ -16,6 +17,7 @@
         - `source venv/bin/activate`
     - Windows
         - `source venv/Scripts/activate`
+#### Finally
 - Install dependencies
     - `pip install -r requirements.txt`
 
