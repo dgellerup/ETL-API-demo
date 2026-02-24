@@ -6,7 +6,6 @@
     - `git clone https://github.com/dgellerup/ETL-API-demo.git`
     - `cd ETL-API-demo`
 
-#### Development Environment (Using uv)
 This project uses uv for dependency and envrionment management.
 - Install uv if not already installed
     - `pip install uv`  
