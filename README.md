@@ -4,29 +4,29 @@
 - Clone this repository to your local projects directory.
     - `cd ~/Projects`
     - `git clone https://github.com/dgellerup/ETL-API-demo.git`
+    - `cd ETL-API-demo`
 - Create an Anaconda/Miniconda Environment with Python 3.12
     - `conda create -n test-env python=3.12`
     - `conda activate test-env`
-#### Optional
-- Install `virtualenv`
-    - `conda install virtualenv`
-- Create a virtualenv environment using your Conda environment's Python 3.12
-    - `virtualenv venv`
-- Activate venv
-    - Unix
-        - `source venv/bin/activate`
-    - Windows
-        - `source venv/Scripts/activate`
-#### Finally
-- Install dependencies
-    - `pip install -r requirements.txt`
 
+#### Development Environment (Using uv)
+This project uses uv for dependency and envrionment management.
+- Install uv if not already installed
+    - `pip install uv`
+    or  
+    - `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- Create and Sync the Environment
+    - Ensure you are using Python 3.12
+        - `uv python install 3.12`
+    - Create the virtual environment and install dependencies.
+        - `uv sync`
+        
 ### Generating Mock User and Account Data
-With `venv` activated, generate mock User and Account data with `generate_mock_data.py`. To create 10 mock Users, who can each have up to 5 Accounts:  
+With `uv` configured, generate mock User and Account data with `generate_mock_data.py`. To create 10 mock Users, who can each have up to 5 Accounts:  
 
-`python generate_mock_data.py -u 10 -a 5`  
+`uv run python generate_mock_data.py -u 10 -a 5`  
 -or-  
-`python generate_mock_data.py --user_count 10 --max_accounts_per_user 5`  
+`uv run python generate_mock_data.py --user_count 10 --max_accounts_per_user 5`  
 
 This script will generate `users.csv` and `accounts.csv` with 10 Users and between 1 and 5 Accounts associated with each User.
 

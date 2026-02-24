@@ -12,7 +12,7 @@ db_url = os.environ.get("DATABASE_URL")
 if not db_url:
     raise SystemExit("No DATABASE_URL")
 
-engine = create_engine(db_url, future=True)
+engine = create_engine(db_url)
 
 for i in range(30):
     try:
