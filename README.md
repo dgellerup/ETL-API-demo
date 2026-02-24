@@ -5,14 +5,11 @@
     - `cd ~/Projects`
     - `git clone https://github.com/dgellerup/ETL-API-demo.git`
     - `cd ETL-API-demo`
-- Create an Anaconda/Miniconda Environment with Python 3.12
-    - `conda create -n test-env python=3.12`
-    - `conda activate test-env`
 
 #### Development Environment (Using uv)
 This project uses uv for dependency and envrionment management.
 - Install uv if not already installed
-    - `pip install uv`
+    - `pip install uv`  
     or  
     - `curl -LsSf https://astral.sh/uv/install.sh | sh`
 - Create and Sync the Environment
@@ -20,7 +17,7 @@ This project uses uv for dependency and envrionment management.
         - `uv python install 3.12`
     - Create the virtual environment and install dependencies.
         - `uv sync`
-        
+
 ### Generating Mock User and Account Data
 With `uv` configured, generate mock User and Account data with `generate_mock_data.py`. To create 10 mock Users, who can each have up to 5 Accounts:  
 
